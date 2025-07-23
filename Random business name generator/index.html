@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Random Business Name Generator</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #667eea, #764ba2);
+      color: white;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      padding: 20px;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+      text-align: center;
+      text-shadow: 2px 2px #00000022;
+    }
+
+    button {
+      padding: 12px 30px;
+      font-size: 1rem;
+      font-weight: bold;
+      color: #764ba2;
+      background-color: #fff;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+      transition: all 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #f3e8ff;
+      transform: scale(1.05);
+    }
+
+    .tagline {
+      margin-top: 20px;
+      font-style: italic;
+      font-size: 1rem;
+      opacity: 0.9;
+    }
+  </style>
+</head>
+<body>
+  <h1 id="businessName">Click below to generate a name</h1>
+  <button onclick="generateBusinessName()">✨ Generate Name</button>
+  <p class="tagline">Powered by CodeWithUzma 🚀</p>
+
+  <script>
+    function getRandomAdjective() {
+      const rand = Math.floor(Math.random() * 3);
+      if (rand === 0) return "Crazy";
+      else if (rand === 1) return "Amazing";
+      else return "Fir";
+    }
+
+    function getRandomShopName() {
+      const rand = Math.floor(Math.random() * 3);
+      if (rand === 0) return "Engine";
+      else if (rand === 1) return "Foods";
+      else return "Garments";
+    }
+
+    function getRandomSuffix() {
+      const rand = Math.floor(Math.random() * 3);
+      if (rand === 0) return "Bros";
+      else if (rand === 1) return "Limited";
+      else return "Hub";
+    }
+
+    function generateBusinessName() {
+      const adjective = getRandomAdjective();
+      const shop = getRandomShopName();
+      const suffix = getRandomSuffix();
+      const name = `${adjective} ${shop} ${suffix}`;
+      document.getElementById("businessName").textContent = name;
+    }
+  </script>
+</body>
+</html>
