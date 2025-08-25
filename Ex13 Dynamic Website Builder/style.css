@@ -1,0 +1,44 @@
+body{
+    background:rgb(1, 1, 1) ;
+}
+
+
+
+.card {
+    background-color: rgb(31, 30, 30);
+     display: flex;
+     margin: 9px;
+     color: white;
+     width: 900px;
+     border-radius: 14px;
+     justify-content: center;
+     align-items: center;
+     padding: 12px;
+ }
+
+ .image img {
+     width: 200px;
+ }
+    h1{
+        padding-left: 4px;
+    }
+ .text h1, p {
+     padding: 4px 8px;
+ }
+
+ .image {
+     position: relative;
+ }
+
+ .image .capsule {
+     position: absolute;
+     bottom: 4px;
+     z-index: 10;
+     right: 5px;
+     background: #242020;
+     opacity: 0.9;
+     color: white;
+     padding: 3px;
+     border-radius: 3px;
+     font-size: 14px;
+ }
